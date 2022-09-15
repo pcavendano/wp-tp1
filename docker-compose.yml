@@ -7,10 +7,10 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: wordpress
     expose:
       - 3306
       - 33060
@@ -29,6 +29,23 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
+    networks:
+      - wp
+  phpmyadmin:
+    image: phpmyadmin
+    links:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    ports:
+      - "9090:90"
+      - "443:443"
+    volumes:
+      - /sessions
     networks:
       - wp
 networks:
