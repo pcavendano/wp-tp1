@@ -4,3 +4,6 @@
 [submodule "a22-31w"]
 	path = a22-31w
 	url = https://github.com/pcavendano/a22-31w.git
+[submodule "html/wp-content/themes/a22-31w"]
+	path = html/wp-content/themes/a22-31w
+	url = http://github.com/pcavendano/21647-31w.git
