@@ -20,6 +20,10 @@ Note: `.no-sidebar` styles are automatically loaded.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fix-do
 Installation
 ---------------
 
